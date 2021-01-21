@@ -72,6 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\DevLib\boost_1_75_0;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\DevLib\boost_1_75_0\stage\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -139,12 +141,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Core\LineSegmentIntersect.h" />
+    <ClCompile Include="Core\LineALgo.cpp" />
+    <ClCompile Include="Core\Vector3.cpp" />
+    <ClCompile Include="Test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\LineAlgo.h" />
     <ClInclude Include="Core\Vector3.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Core\Vector3.cpp" />
-    <ClCompile Include="Test.cpp" />
+    <None Include="Ref.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

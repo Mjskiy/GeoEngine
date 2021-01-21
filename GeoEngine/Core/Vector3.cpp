@@ -69,11 +69,6 @@ Vector3 Vector3::Cross(const Vector3& v) const
 	return c ;
 }
 
-Vector3 Vector3::Hello()
-{
-	return Vector3();
-}
-
 Vector3 operator-(Point a, Point b)
 {
 	Vector3 v;
